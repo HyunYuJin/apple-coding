@@ -3,13 +3,20 @@
 }
 
 .black-nav {
-  background : black;
+  background : #F6F5EF;
   width : 100%;
   display : flex;
-  color : white;
+  color : #007042;
   padding : 20px;
   font-weight : 600;
   font-size : 20px;
+}
+
+.practice-space {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5rem;
 }
 
 .list {
@@ -17,4 +24,48 @@
   text-align : left;
   padding-left : 20px;
   padding-right : 20px;
+}
+
+.list-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.7rem;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  align-self: center;
+  background-color: #FFF;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  height: 38px;
+  font-size: 14px;
+  color: #FFF;
+  background-color: #00704A;
+  border: 2px solid #00704A;
+  line-height: 36px;
+  padding: 0 18.5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
