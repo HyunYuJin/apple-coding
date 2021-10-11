@@ -14,6 +14,8 @@ function App() {
 
   let [modal, modalState] = useState(false) // 모달창을 on/off
   let [title, titleState] = useState(0)
+  let [input, inputState] = useState('')
+  let [write, writeState] = useState('')
 
   return (
     <div className="App">
@@ -24,11 +26,16 @@ function App() {
       <div className="practice-space">
         <button className="btn" onClick={ changeFood }>Change the first menu.</button>
         <button className="btn" onClick={ () => modalState(!modal) }>Modal ON/OFF</button>
+
+        <div className="input-wrap">
+          <input className="input-box" onChange={ (event) => inputState(event.target.value) } />
+          <span>사용자가 검색하는 내용: { input }</span>
+        </div>
       </div>
       {
         food.map((write, index) => {
           return (
-            <div className="list">
+            <div className="list" key={ index }>
               <h3 className="list-title" onClick={ () => {
                   titleState(index) 
                   modalState(!modal)
@@ -48,6 +55,15 @@ function App() {
         ? <Modal propsFood={ food } propsTitle={ title } />
         : null
       }
+
+      <div className="publish">
+        <input onChange={ (event) => writeState(event.target.value) } />
+        <button className="btn" onClick={ () => {
+          let array = [...food]
+          array.unshift(write)
+          foodState(array)
+        } }>저장</button>
+      </div>
     </div>
   );
 }
