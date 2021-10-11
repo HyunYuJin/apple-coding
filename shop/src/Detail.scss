@@ -1,5 +1,14 @@
 $mainColor: #333;
 
+@mixin name {
+    background-color: #EEE;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+}
+
 .title {
     color: $mainColor;
 }
@@ -10,16 +19,11 @@ div.container {
 }
 
 .my-alert-1 {
-    background-color: #EEE;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 500px;
-    width: 100%;
-    margin: auto;
-
     p {
         margin-bottom: 0;
     }
+    
+    @include name()
 }
 .my-alert-2 {
     @extend .my-alert-1;
