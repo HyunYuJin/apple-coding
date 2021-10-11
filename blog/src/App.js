@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './App.css';
+import './App.css'
+import Profile from './Profile'
 
 function App() {
   let [food, foodState] = useState(['Ola Cubano Sandwich', 'Gambas Pasta Mill Box', 'Dolkorom Jjojirong Waffle Sand', 'Barbecue Chicken Cheese Ciabatta', 'Ricotta Cheese Baguette Sandwich.'])
@@ -64,6 +65,8 @@ function App() {
           foodState(array)
         } }>저장</button>
       </div>
+
+      <Profile />
     </div>
   );
 }
