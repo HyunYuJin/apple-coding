@@ -1,0 +1,8 @@
+.background {
+  height: 400px;
+  line-height: 400px;
+  text-align: center;
+  color: #FFF;
+  background-color: #888;
+  font-size: 3rem;
+}
