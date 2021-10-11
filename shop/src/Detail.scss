@@ -1,0 +1,28 @@
+$mainColor: #333;
+
+.title {
+    color: $mainColor;
+}
+
+div.container {
+    h4 { color: navy; }
+    p { color: gray; }
+}
+
+.my-alert-1 {
+    background-color: #EEE;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+
+    p {
+        margin-bottom: 0;
+    }
+}
+.my-alert-2 {
+    @extend .my-alert-1;
+    background-color: #FFE591;
+    margin-top: 10px;
+}
